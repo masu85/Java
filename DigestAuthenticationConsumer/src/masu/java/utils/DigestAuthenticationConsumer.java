@@ -89,8 +89,8 @@ public class DigestAuthenticationConsumer
         }
         finally
         {
-            client401.close();
-            clientResponse.close();
+            try{client401.close();}      catch(IOException ioe) {System.out.println(ioe.getMessage());}
+            try{clientResponse.close();} catch(IOException ioe) {System.out.println(ioe.getMessage());}
         }
         
         return result;
