@@ -1,4 +1,4 @@
-package edu.esade.utils;
+package masu.java.utils;
 
 import java.io.IOException;
 import org.apache.http.Header;
