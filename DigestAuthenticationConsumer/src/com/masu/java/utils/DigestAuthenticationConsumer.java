@@ -1,4 +1,4 @@
-package masu.java.utils;
+package com.masu.java.utils;
 
 import java.io.IOException;
 import org.apache.http.Header;
