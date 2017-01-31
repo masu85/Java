@@ -23,13 +23,24 @@ public class StormTrooperImpl implements StormTrooper
         return this.numStormTrooper;
     }
 
-    public String getEspecialidad()
-    {
-        return soldado.getEspecialidad();
+    @Override
+    public String getRango() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public String getTipoCombate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
     public String getArmaPrincipal()
     {
         return soldado.getArmaPrincipal();
     }    
+
+    @Override
+    public String getTipoArmadura() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
