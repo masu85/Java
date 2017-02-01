@@ -1,44 +1,61 @@
 package com.masu.java.designPatterns.FlyWeight;
 
 /**
- *  Clase genérica para definir y controlar las características que puede tener un StormTrooper.
+ *  Esta es la clase para los objetos donde vamos a definir las cualidades de los StoormTroopers que vamos a creear.
+ *  Por desgracia no se nos permite poner la cualidad "MatarJedis" :(
  * 
  *  @author Masu
  */
 public class CaracteristcasStormTrooper
 {
-    private static int tipoSoldadosCreados;
+    private static int tiposSoldadosCreados;
     
-    private String especialidad;
+    private String rango;
+    private String tipoCombate;
     private String armaPrincipal;
+    private String tipoArmadura;
 
-    public CaracteristcasStormTrooper(String especialidad, String armaPrincipal)
+    public CaracteristcasStormTrooper(String rango, String tipoCombate, String armaPrincipal, String tipoArmadura)
     {
-        this.especialidad  = especialidad;
-        this.armaPrincipal = armaPrincipal;    
+        this.rango  = rango;
+        this.tipoCombate = tipoCombate;
+        this.armaPrincipal = armaPrincipal;
+        this.tipoArmadura = tipoArmadura;
         
-        tipoSoldadosCreados++;
+        tiposSoldadosCreados++;
         
-        System.out.println("Tipos de Soldados Creados: " + tipoSoldadosCreados);
+        System.out.println("Tipos de Soldados Creados: " + tiposSoldadosCreados);
     }
     
-    public String getEspecialidad()
-    {
-        return especialidad;
+    public String getRango() {
+        return rango;
     }
-    
-    public void setEspecialidad(String especialidad)
-    {
-        this.especialidad = especialidad;
+
+    public void setRango(String rango) {
+        this.rango = rango;
     }
-    
-    public String getArmaPrincipal()
-    {
+
+    public String getTipoCombate() {
+        return tipoCombate;
+    }
+
+    public void setTipoCombate(String tipoCombate) {
+        this.tipoCombate = tipoCombate;
+    }
+
+    public String getArmaPrincipal() {
         return armaPrincipal;
     }
-    
-    public void setArmaPrincipal(String armaPrincipal)
-    {
+
+    public void setArmaPrincipal(String armaPrincipal) {
         this.armaPrincipal = armaPrincipal;
+    }
+
+    public String getTipoArmadura() {
+        return tipoArmadura;
+    }
+
+    public void setTipoArmadura(String tipoArmadura) {
+        this.tipoArmadura = tipoArmadura;
     }
 }

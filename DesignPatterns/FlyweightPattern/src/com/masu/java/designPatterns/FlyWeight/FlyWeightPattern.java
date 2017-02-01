@@ -18,16 +18,37 @@ public class FlyWeightPattern
             Imaginemos que el señor Darth Vader se aburre y le entra el capricho de invadir la galaxia, así, porque sí.
             Para ello necesita un ejército de un millón de soldados de esos que no haciertan ni un disparo estando a
             5cm del objetivo. (https://www.facebook.com/Funidelia/videos/1434017589964060/)
+        
+            El problema es que quiere guardar los datos de todos los soldados en su PenDrive para poder conectarlo en el 
+            aparato de lucecitas que lleva en el pecho.
+        
+            Guardar la información de todos los soldados ocuparía mucho espacio en en el pendrive, así que utilizaremos el 
+            patrón FlyWeightPattern para reducir la cantidad de información.
         */
         
-        /* Para ello crearemos una factoría para crear los StormTroopers*/
-        
-        StormTrooper st1 = FactoriaStormTroopers.crearStormTrooper(1, "Melee", "Katana");
-        StormTrooper st2 = FactoriaStormTroopers.crearStormTrooper(2, "Rango", "PistolaLaser");
-        StormTrooper st3 = FactoriaStormTroopers.crearStormTrooper(3, "Melee", "Katana");
-        StormTrooper st4 = FactoriaStormTroopers.crearStormTrooper(4, "Melee", "Puñal");
-        StormTrooper st5 = FactoriaStormTroopers.crearStormTrooper(5, "Rango", "PistolaLaser");
-        StormTrooper st6 = FactoriaStormTroopers.crearStormTrooper(6, "Rango", "PistolaLaser");
-        StormTrooper st7 = FactoriaStormTroopers.crearStormTrooper(7, "Rango", "PistolaLaser");
+        /* Para crear el millon de soldados utilizaremos una factoría de soldados, donde para cada soldado le indicaremos una série de características */
+        for(int i = 0; i < 1000000; i++)
+        {
+            if(i % 13 == 0)
+            {
+                FactoriaStormTroopers.crearStormTrooper(i, "SoldadoRaso", "Rango", "RifleLaserLargaDistancia", "Básica");
+            }
+            else if(i % 7 == 0)
+            {
+                FactoriaStormTroopers.crearStormTrooper(i, "InfaneríaPesada", "Rango", "CañonLaser", "Básica");
+            }
+            else if(i % 5 == 0)
+            {
+                FactoriaStormTroopers.crearStormTrooper(i, "SoldadoRaso", "Melee", "Katana", "Reforzada");
+            }
+            else if(i % 3 == 0)
+            {
+                FactoriaStormTroopers.crearStormTrooper(i, "Conductor", "Melee", "Puñal", "Básica");
+            }
+            else
+            {
+                FactoriaStormTroopers.crearStormTrooper(i, "SoldadoRaso", "Rango", "PistolaLaser", "Básica");
+            }
+        }
     }    
 }
